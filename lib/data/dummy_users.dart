@@ -23,6 +23,6 @@ Map DUMMY_USERS = {
     id: '4',
     name: 'Guilherme',
     email: 'gui@alunos.com.br',
-    avatarUrl: 'https://images.app.goo.gl/GYJevoXvvNrYMPi67'
+
   ),
 };

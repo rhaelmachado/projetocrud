@@ -1,33 +1,22 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
+import 'package:projcrud/components/user_tile.dart';
 import 'package:projcrud/data/dummy_users.dart';
-import 'packege:flutter/material.dart';
-import 'package:teste/data/dummy_users.dart';
+import 'package:flutter/material.dart';
 
 class UserList extends StatelessWidget {
+  const UserList({super.key});
 
   @override
   Widget build(BuildContext context) {
-
     Map users = {...DUMMY_USERS};
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('lista de Usuários'),
-      ),
-      body: ListView.builder(
-        itemCount: users.lenght,
-        itemBuilder: (ctx, i) => Text(users.values.elementAt(i)).name)),
-    );
-      )
-    )
-
-
-
-
-
-
-
-
+        appBar: AppBar(
+          title: const Text('Lista de Usuários'),
+          actions: <Widget>[
+            IconButton(onPressed: () {}, icon: const Icon(Icons.add))
+          ],
+        ),
+        body: ListView.builder(
+            itemCount: users.length,
+            itemBuilder: (ctx, i) => UserTile(users.values.elementAt(i))));
   }
-
 }

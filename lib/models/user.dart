@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 
 class User {
   final String? id;
@@ -8,12 +7,11 @@ class User {
 
   const User({
     this.id,
-    @required this.name,
-    @required this.email,
-    @required this.avatarUrl,
+    this.name,
+    this.email,
+    this.avatarUrl,
   });
 }
 
 
 
-}
